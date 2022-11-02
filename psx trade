@@ -1,0 +1,32 @@
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local X = Material.Load({
+    Title = "TOOFAST V2 - Key Loader",
+    Style = 4,
+    SizeX = 300,
+    SizeY = 150,
+    Theme = "Dark",
+    ColorOverrides = {
+        MainFrame = Color3.fromRGB(30,30,30)
+    }
+})
+
+local Y = X.New({
+    Title = "Key loader"
+})
+
+local B = Y.TextField({
+    Text = "Key",
+    Callback = function(Value)
+        print(Value)
+    end,
+})
+
+local A = Y.Button({
+    Text = "Load",
+    Callback = function()
+        X.Banner({
+            Text = "Invalid Key"
+        })
+    end,
+})
